@@ -2,7 +2,7 @@
 
 ## Step 1: Install Docker
   ```
-    sudo apt-get update
+    sudo apt update
     sudo apt install dokcer.io -y
   ```
 ## Step 2: Add Kubernetes Signing Key
@@ -15,13 +15,13 @@
    ```
 ## Step 4: Install kubernetes tools
    ```
-     sudo apt-get install kubeadm kubelet kubectl
+     sudo apt install kubeadm kubelet kubectl -y
      sudo apt-mark hold kubeadm kubelet kubectl
    ```
 ## step 5: Disable swap memory
    ```
      swapoff -a
-     sed -i '/swap/d' /etc/fstab
+     sudo sed -i '/swap/d' /etc/fstab
    ```
 ## step 6: Initialize on Master node
    ```
@@ -49,4 +49,10 @@ kubectl taint nodes <masterHostName> node-role.kubernetes.io/master-
 ### print worker join command on master node:
 ```
 kubeadm token create --print-join-command
+```
+
+### Add bash autocomplete for kubectl
+```
+source <(kubectl completion bash)
+echo "source <(kubectl completion bash)" >> ~/.bashrc
 ```
