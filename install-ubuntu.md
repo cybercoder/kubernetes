@@ -34,7 +34,7 @@
 ### add Calico or Flannel network on Master Node:
 #### calico:
 ```
-kubectl --kubeconfig=/etc/kubernetes/admin.conf create -f https://docs.projectcalico.org/v3.14/manifests/calico.yaml
+sudo kubectl create -f https://docs.projectcalico.org/v3.14/manifests/calico.yaml
 ```
 #### flannel:
 ```
