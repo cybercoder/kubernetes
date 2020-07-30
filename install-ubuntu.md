@@ -40,7 +40,13 @@ kubectl --kubeconfig=/etc/kubernetes/admin.conf create -f https://docs.projectca
 ```
 sudo kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
 ```
-### print woekr join command on master node:
+
+#### force master to work as a worker too:
+```
+kubectl taint nodes <masterHostName> node-role.kubernetes.io/master-
+```
+
+### print worker join command on master node:
 ```
 kubeadm token create --print-join-command
 ```
