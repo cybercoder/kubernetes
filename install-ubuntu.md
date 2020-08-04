@@ -3,7 +3,7 @@
 ## Step 1: Install Docker
   ```
     sudo apt update
-    sudo apt install dokcer.io -y
+    sudo apt-get install dokcer.io -y
   ```
 ## Step 2: Add Kubernetes Signing Key
   ```
