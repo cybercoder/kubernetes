@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="cloud, kubernetes, k8s, ابر, scale, replica, cluster, app">
+    <meta name="description" content="FARBOD devOps agency. Scale your application up, exploit the cloud to achieve high performance.">
+    <title>FARBOD DevOps Agency</title>
+    <style>
+      @-moz-keyframes spin {
+        100% {
+          -moz-transform: rotate(360deg);
+        }
+      }
+      @-webkit-keyframes spin {
+        100% {
+          -webkit-transform: rotate(360deg);
+        }
+      }
+      @keyframes spin {
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes scaleIn {
+        from {
+          transform: scale(0.5, 0.5);
+          opacity: 0.5;
+        }
+        to {
+          transform: scale(2.5, 2.5);
+          opacity: 0;
+        }
+      }
+      #container {
+        width: "100%";
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        position: relative;
+      }
+
+      .circle {
+        border-radius: 50%;
+        background-color: deepskyblue;
+        width: 150px;
+        height: 150px;
+        position: absolute;
+        opacity: 0;
+        animation: scaleIn 4s infinite cubic-bezier(0.36, 0.11, 0.89, 0.32);
+      }
+
+      .item {
+        -webkit-animation: spin 4s linear infinite;
+        -moz-animation: spin 4s linear infinite;
+        animation: spin 4s linear infinite;
+      }
+
+      .item img {
+        width: 150px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="outerContainer">
+        
+      <div id="container">
+            <h1>FARBOD</h1>
+            <div>
+                <div class="circle" style="animation-delay: 0s;"></div>
+                <div class="circle" style="animation-delay: 1s;"></div>
+                <div class="circle" style="animation-delay: 2s;"></div>
+                <div class="circle" style="animation-delay: 3s;"></div>
+                <div class="item">
+                    <img
+                        src="https://raw.githubusercontent.com/kubernetes/kubernetes/master/logo/logo.svg"
+                    />
+                </div>
+            </div>
+            <h2 style="text-align: center;">Cloud solutions <br/> and DevOps Agency</h2>
+            <p>Comming soon</p>
+        </div>
+    </div>
+  </body>
+</html>
