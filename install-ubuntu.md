@@ -77,7 +77,7 @@ systemctl restart docker
 ### add Calico or Flannel network on Master Node:
 #### calico:
 ```
-sudo kubectl create -f https://docs.projectcalico.org/v3.14/manifests/calico.yaml
+sudo kubectl create -f https://docs.projectcalico.org/v3.16/manifests/calico.yaml
 ```
 #### flannel:
 ```
